@@ -32,7 +32,7 @@ informatie. Het programma levert vervolgens een rapportage op basis van deze ana
 - Er komen 2 prints, een met een top 5 meeste communicatie met de webserver en een met top 5 minste communicatie met de webserver.
 - Dezelfde ip-adressen mogen niet meerdere keren voorkomen in de prints.
 
-**Hier komt een script van vraag 2 samen met documentatie**
+**Script Vraag 2: MostAndLeast.py**
 
 
 ```py
@@ -73,6 +73,9 @@ def main():
 
 main()
 ```
+
+**Hier komt documentatie van kleine stukjes code**
+
 <br>
 <br>
 
