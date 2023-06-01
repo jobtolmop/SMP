@@ -1,2 +1,2 @@
-# SMP
-System &amp; Middleware Programming - Hogeschool van Amsterdam
+# System & Middleware Programming
+## System &amp; Middleware Programming - Hogeschool van Amsterdam
