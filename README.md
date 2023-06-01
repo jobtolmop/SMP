@@ -1,11 +1,21 @@
 # System & Middleware Programming
 ## Job Tol - Klas IC 105
 
-PROBLEEMSTELLING<br>
-PROBLEEMSTELLING<br>
-PROBLEEMSTELLING<br>
-PROBLEEMSTELLING<br>
-PROBLEEMSTELLING<br>
+Als Cyber Security specialist moet je verschillende soorten gegevens kunnen doorzoeken. Om dit met de hand te doen is vrijwel onmogelijk, daarom worden er vaak tools gebruikt die dit voor ons doen. Deze tools zullen echter niet altijd de functionaliteiten hebben waar je naar zoekt, daarom moet je ook in staat zijn je eigen tools te schrijven.
+
+De dataset die wordt behandeld bestaat uit opgevangen netwerk-traffic. Dit is traffic naar een webserver van een universiteit, en
+de dataset bevat de pakketjes die je daarvan mag verwachten. Sommige hosts zijn verbonden met het
+universiteitsnetwerk, en zitten daarom in hetzelfde subnet als de webserver, terwijl andere hosts vanaf een
+andere locatie de website proberen te bezoeken. Hoewel de meeste hosts op de juiste manier
+communiceren met de webserver, zijn er ook hosts in deze dataset die minder nobele doelen hebben: een
+aantal proberen op de webserver in te breken, deze te overspoelen met verzoeken, of op een andere manier
+de webserver uit de lucht te krijgen.
+
+Voor deze opdracht ga ik met gemaakte programma's een dataset analyseren op potentieel interessante
+informatie. Het programma levert vervolgens een rapportage op basis van deze analyse.
+
+<br>
+<br>
 
 ## Vraag 1: Hoeveel verschillende hosts communiceren er met de webserver
 - Hier moet een script voor worden geschreven en wordt gezocht op ip-adressen uit de meegekregen dataset.
@@ -14,12 +24,18 @@ PROBLEEMSTELLING<br>
 
 **Hier komt een script van vraag 1 samen met documentatie**
 
+<br>
+<br>
+
 ## Vraag 2: Welke hosts communiceren het meest/minst met de webserver
 - Hier moet een script worden geschreven die alle ip adressen bijhoudt en hoeveel ze voorkomen in de dataset.
 - Er komen 2 prints, een met een top 5 meeste communicatie met de webserver en een met top 5 minste communicatie met de webserver.
 - Dezelfde ip-adressen mogen niet meerdere keren voorkomen in de prints.
 
 **Hier komt een script van vraag 2 samen met documentatie**
+
+<br>
+<br>
 
 ## Vraag 3: Welke berichten zijn onderdeel van een DDOS-aanval
 - In de screenshots hieronder vind je frames van het eerste en laatste pakketje. De hele capture bedraagt 25 minuten / 1500 seconden.
