@@ -1,2 +1,3 @@
 # System & Middleware Programming
-## System &amp; Middleware Programming - Hogeschool van Amsterdam
+## Job Tol - Klas IC 105
+## Hogeschool van Amsterdam
