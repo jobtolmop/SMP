@@ -1,3 +1,6 @@
+# Hier een script waarmee ik de meeste en minste connecties naar een webserver pak uit de dataset.json
+# De counter Module wordt gebruikt om de ips op te slaan en weer te geven hoevaak ze voorkomen.
+
 import json
 from collections import Counter
 
@@ -21,7 +24,8 @@ def most_and_least(data):
     for host, count in least_connections:
         print(f"{host}: {count} connections")
 
-    
+# Main functie waarin ik de dataset open met 'r' (read) en een variabele data meegeef die ik gelijk 
+# stel aan de json file data.
 
 def main():
     with open("dataset.json", "r") as file:
