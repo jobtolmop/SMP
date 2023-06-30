@@ -104,6 +104,10 @@ slachtoffers en een lijst van ip-adressen met aanvallers. Bij de aanvallers zul 
 - Prints met slachtoffers ip-adressen
 - Prints met aanvallers ip-adressen (en hoeveel pakketten ze hebben verstuurd in de aanvallen)
 
-
+## Test Sets 
+- There are 2 testsets, one with positive and one with negative result.
+- The goal of the tests was to see if I can properly search through a list of ip adresses and get results out of it
+- I use PyTest for the tests so you have to use the following command to test it
+- C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\Tests> pytest file.py
 
 
