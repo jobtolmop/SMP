@@ -24,14 +24,22 @@ in mijn programma heb ik voor de volgende 3 onderwerpen een script geschreven me
 - Hoeveel verschillende hosts communiceren er met de webserver? (+ Functionaliteit van lijst met alle IP-adressen)
 - Welke berichten zijn onderdeel van een DDOS aanval?
 
+<br>
+<br>
 
 
 ## Vraag 1: Hoeveel verschillende hosts communiceren er met de webserver?
+Er moet een script worden geschreven die alle verschillende hosts uit de dataset worden gehaald. Het is hierbij belangrijk dat het geen dubbele gegevens bevat en het
+zal hier dus op moeten checken. Verder om geen enorme lading aan data te creeeren zijn er functies te gebruiken in een CLI om of alleen het nummer van unieke hosts te laten
+zien. Of een hele lijst met alle unieke hosts.
 
-- Hier moet een script voor worden geschreven en wordt gezocht op ip-adressen uit de meegekregen dataset.
-- Verder moet er een for loop komen om geen zelfde IP adressen mee te tellen.
-- Alle verschillende ip-adressen worden geprint met het aanroepen van de functie, en de laatste print zal bestaan uit ‘er zijn X aantal verschillende ip-adressen in de dataset’
-
+### Script 1: Functionaliteit
+- In de functie **'amount_of_unique_hosts'** in het script **Program.py** wordt bepaald hoeveel verschillende hosts communiceren met de webserver.
+- Eerst wordt er een lege lijst aangemaakt genaamd 'unique_hosts'
+- Er wordt in een json dataset gekeken naar de ip-adressen van de 'source' en 'destination'
+- Deze ip-adressen worden toegevoegd aan de lijst met unique_hosts
+- Dubbele ip-adressen worden niet toegevoegd
+- De lijst met uniquehosts wordt gereturned
 
 <br>
 <br>
