@@ -38,21 +38,21 @@ in mijn programma heb ik voor de volgende 3 onderwerpen een script geschreven me
 - C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py
 - Het zou moeten zeggen 'usage: program.py [-h] [--show-ips] [--threshold THRESHOLD] [--most-and-least] [--unique-hosts] file_name
 - Je moet echter eerst de dataset aanroepen voordat je verder gaat, dit gaat zo **(klik niet op enter)**
-- C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json
+- C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json
 
 - Vanaf hier kun je de 4 commando's uitvoeren
 
-### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --threshold THRESHOLD
+### C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --threshold THRESHOLD
 - THRESHOLD wordt met een nummer verplaatst. so 1,2,3,4 etc... dat het bijvoorbeeld --threshold 2 maakt.
 - Het laat in dit geval alle ip adressen zien van slachtoffers die 2 of meer pakketjes hebben binnengekregen per seconde en de aanvallers met hun ip-adressen en aantal verstuurde pakketjes.
 
-### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --most-and-least
+### C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --most-and-least
 - Laat top 5 meeste en minste hosts zien qua connecties met de webserver.
 
-### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts
+### C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts
 - Laat aantal unieke hosts zien
   
-### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts --show-ips
+### C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts --show-ips
 - **Disclaimer: Kan alleen worden gebruikt door eerst --unique-hosts aan te roepen.**
 - Laat alle ip-adressen zien van alle unieke hosts.
 
