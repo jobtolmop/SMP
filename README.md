@@ -27,6 +27,37 @@ in mijn programma heb ik voor de volgende 3 onderwerpen een script geschreven me
 <br>
 <br>
 
+## Hoe gebruik je het programma als CLI
+- Download en unzip het bestand met alle scripts.
+- Open je command prompt/powershell etc...
+- ga naar het pad waar beide de dataset.json en de Program.py bestanden in staan met cd/map/map/... of kopieer het hele pad van de folder en plak het in de cmd
+  
+- Het ziet er ongeveer zo uit
+- C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\
+- Vanaf nu kun je het script aanroepen met
+- C:\Users\a>python C:\Users\a\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py
+- Het zou moeten zeggen 'usage: program.py [-h] [--show-ips] [--threshold THRESHOLD] [--most-and-least] [--unique-hosts] file_name
+- Je moet echter eerst de dataset aanroepen voordat je verder gaat, dit gaat zo **(klik niet op enter)**
+- C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json
+
+- Vanaf hier kun je de 4 commando's uitvoeren
+
+### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --threshold THRESHOLD
+- THRESHOLD wordt met een nummer verplaatst. so 1,2,3,4 etc... dat het bijvoorbeeld --threshold 2 maakt.
+- Het laat in dit geval alle ip adressen zien van slachtoffers die 2 of meer pakketjes hebben binnengekregen per seconde en de aanvallers met hun ip-adressen en aantal verstuurde pakketjes.
+
+### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --most-and-least
+- Laat top 5 meeste en minste hosts zien qua connecties met de webserver.
+
+### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts
+- Laat aantal unieke hosts zien
+  
+### C:\Users\jobto>python C:\Users\jobto\OneDrive\Documenten\GitHub\SMP\SMP_Eindopdracht\SMP_Dataset_Tool\program.py dataset.json --unique-hosts --show-ips
+- **Disclaimer: Kan alleen worden gebruikt door eerst --unique-hosts aan te roepen.**
+- Laat alle ip-adressen zien van alle unieke hosts.
+
+<br>
+<br>
 
 ## Vraag 1: Hoeveel verschillende hosts communiceren er met de webserver?
 Er moet een script worden geschreven die alle verschillende hosts uit de dataset worden gehaald. Het is hierbij belangrijk dat het geen dubbele gegevens bevat en het
@@ -56,13 +87,23 @@ ip-adressen in de dataset en een print met de top 5 minst voorkomende ip-adresse
 <br>
 <br>
 
-## Vraag 3: Welke berichten zijn onderdeel van een DDOS-aanval
+## Vraag 3: Welke berichten zijn onderdeel van een DDOS-aanval 
 
-- In de screenshots hieronder vind je frames van het eerste en laatste pakketje. De hele capture bedraagt 25 minuten / 1500 seconden.
-- Er zijn 3001 pakketjes aanwezig, dus ongeveer 2 pakketjes per seconde.
-- Om te sorteren op een DDOS aanval met deze dataset kan ik kijken welk ip-adres de meeste pakketjes ontvangt in welke seconden.
-- Dan kijk ik naar de ip-adressen die de berichten heeft gestuurd naar het ip-adres(sen) die de meeste pakketjes heeft ontvangen
-- Daarna pak ik die ip-adressen en kijk ik hoeveel pakketten ze versturen per seconden.
-- Als er instanties komen dat bij een ip adres 10 of meer pakketjes worden verstuurd per seconden kun je er van uit gaan dat je te maken hebt met een aanval. 
+Er moet een script komen die een gebruiker een eigen drempelwaarde laat invullen voor pakketjes per seconden om zo te sorteren op een DDOS aanval. Een DDOS aanval is een aanval
+waarbij iemand in enorm korte tijd misschien wel miljoenen pakketjes binnen kan krijgen. Omdat de dataset die wij gebruiken maar 3000 pakketjes binnenkrijgt over een tijd van 25 minuten
+is het dus van belang dat de code dynamisch is en de gebruiker van het programma vrijheid geeft om te sorteren op waarden die ze zelf invullen. er komt een lijst met ip-adressen van 
+slachtoffers en een lijst van ip-adressen met aanvallers. Bij de aanvallers zul je ook het aantal pakketten dat ze hebben verstuurd in dezelfde print terugzien.
+
+### Script 3: Functionaliteit
+**Disclaimer: in het geval van deze dataset zal je alleen bericht krijgen van een 'potentiele DDOS attack' als je 1 of 2 invult als drempelwaarde, in realiteit is dit vele malen groter**
+- In de functie 'detect_ddos_attack' wordt gekeken hoeveel pakketten er binnenkomen per seconde en wordt er een drempelwaarde meegegeven.
+- Er zijn lijsten en dictionaries van slachtoffers en attackers die worden gevuld door hun ip-adressen als de count gelijk of over de drempelwaarde is.
+- Er wordt bijgehouden of dezelfde ip-adressen niet voorkomen in dezelfde aanval.
+- Het totaal aantal aanvallen wordt bijgehouden na elke 'aanval' (zelfde aantal of hoger aantal pakketjes dan je drempelwaarde)
+- Prints met aantal potentiele aanvallen in de dataset
+- Prints met slachtoffers ip-adressen
+- Prints met aanvallers ip-adressen (en hoeveel pakketten ze hebben verstuurd in de aanvallen)
+
+
 
 
