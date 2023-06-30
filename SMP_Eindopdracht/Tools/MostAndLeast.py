@@ -1,4 +1,4 @@
-# Hier een script waarmee ik de meeste en minste connecties naar een webserver pak uit de dataset.json
+# Hier een script waarmee de meeste en minste connecties naar een webserver worden gepakt uit de een json dataset
 # De counter Module wordt gebruikt om de ips op te slaan en weer te geven hoevaak ze voorkomen.
 
 import json

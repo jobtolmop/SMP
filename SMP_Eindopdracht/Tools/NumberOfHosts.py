@@ -1,3 +1,5 @@
+# Hier een script waarmee alle verschillende IP-adressen worden laten zien uit een json dataset.
+
 import json
 
 # Functie waarin de JSON data wordt gepakt en het false zetten van de parameter show_ips
