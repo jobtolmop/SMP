@@ -26,7 +26,6 @@ def most_and_least(data):
 
 # Main functie waarin ik de dataset open met 'r' (read) en een variabele data meegeef die ik gelijk 
 # stel aan de json file data.
-
 def main():
     with open("dataset.json", "r") as file:
         data = json.load(file)
