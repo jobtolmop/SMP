@@ -45,11 +45,14 @@ zien. Of een hele lijst met alle unieke hosts.
 <br>
 
 ## Vraag 2: Welke hosts communiceren het meest/minst met de webserver?
+Er moet een script worden geschreven dat alle ip-adressen bijhoudt en hoeveel ze voorkomen in de dataset. Er moeten hierbij 2 prints komen, een met een top 5 van meest voorkomende
+ip-adressen in de dataset en een print met de top 5 minst voorkomende ip-adressen in de dataset. Dezelfde ip-adressen mogen niet meerdere keren voorkomen in de prints.
 
-- Hier moet een script worden geschreven die alle ip adressen bijhoudt en hoeveel ze voorkomen in de dataset.
-- Er komen 2 prints, een met een top 5 meeste communicatie met de webserver en een met top 5 minste communicatie met de webserver.
-- Dezelfde ip-adressen mogen niet meerdere keren voorkomen in de prints.
-
+### Script 2: Functionaliteit
+- In de functie **'most_and_least'** in het script **Program.py** worden alle ip-source adressen verzameld.
+- De connection_counter variabele houdt bij hoe vaak een ip-adres is gezien in de lijst van source adressen.
+- Het pakt een top 5 van meeste en minste connecties met de variabelen most_connections & least_connections en returned deze waarden.
+  
 <br>
 <br>
 
